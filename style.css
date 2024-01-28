@@ -1,0 +1,41 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(65, 65, 65);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 20vh auto 10vh;
+  min-height: 100vh;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+  /* 
+    grid-gap: 5px;
+        -grid-row-gap: 5px;
+        -grid-column-gap: 5px; */
+}
+
+.content > header {
+  background-color: orange;
+  grid-area: header;
+}
+.content > main {
+  padding: 5%;
+  background-color: red;
+  grid-area: main;
+}
+
+.content > aside {
+  background-color: blue;
+  grid-area: aside;
+}
+.content > footer {
+  background-color: green;
+  grid-area: footer;
+}
