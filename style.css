@@ -1,9 +1,17 @@
+:root {
+  --bg-html: #414141;
+  --bg-header: orange;
+  --bg-main: red;
+  --bg-aside: blue;
+  --bg-footer: green;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(65, 65, 65);
+  background-color: var(--bg-html); /*#414141*/
 }
 
 .content {
@@ -17,25 +25,48 @@ body {
     "footer footer";
   /* 
     grid-gap: 5px;
-        -grid-row-gap: 5px;
-        -grid-column-gap: 5px; */
+        -row-gap: 5px;
+        -column-gap: 5px; */
 }
 
 .content > header {
-  background-color: orange;
+  background-color: var(--bg-header); /*orange*/
   grid-area: header;
 }
 .content > main {
   padding: 5%;
-  background-color: red;
+  background-color: var(--bg-main); /*red*/
   grid-area: main;
 }
-
 .content > aside {
-  background-color: blue;
+  background-color: var(--bg-aside);
   grid-area: aside;
 }
 .content > footer {
-  background-color: green;
+  background-color: var(--bg-footer);
   grid-area: footer;
+}
+
+.cursos {
+  display: grid;
+  min-height: 100px;
+  background-color: goldenrod;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 30vh 30vh 30vh;
+  row-gap: 2px;
+  column-gap: 2px;
+}
+.padrao>img{
+  background-size: contain;
+  max-width: 100%;
+  max-height: 40%;
+}
+.cursos > div {
+  min-height: 10px;
+  min-width: 10px;
+  background-color: darkcyan;
+}
+
+.padrao{
+  
 }
